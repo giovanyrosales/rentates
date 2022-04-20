@@ -57,7 +57,7 @@ Route::get('/admin/roles/index', [RolesController::class,'index'])->name('admin.
     Route::post('/admin/permisos/extra-borrar', [PermisosController::class, 'borrarPermisoGlobal']);
 
     // --- PERFIL ---
-    Route::get('/admin/editar-perfil/index', [PerfilController::class,'editarUsuario'])->name('admin.perfil');
+    Route::get('/admin/editar-perfil/index', [PerfilController::class,'indexEditarPerfil'])->name('admin.perfil');
     Route::post('/admin/editar-perfil/actualizar', [PerfilController::class, 'editarUsuario']);
 
     // --- CONFIGURACIONES ---
