@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\Login\LoginController;
 use App\Http\Controllers\Controles\ControlController;
-use App\Http\Controllers\Backend\Perfil\PerfilControl;
+use App\Http\Controllers\Backend\Perfil\PerfilController;
 use App\Http\Controllers\Backend\RolesPermisos\RolesController;
 use App\Http\Controllers\Backend\RolesPermisos\PermisosController;
 use App\Http\Controllers\Backend\Proveedor\ProveedorController;
