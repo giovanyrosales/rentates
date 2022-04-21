@@ -246,18 +246,18 @@ public function update_proveedor(Request $request){
     public function delete_registroret(Request $request){
         if($request->isMethod('post')){  
 
-            if($datos = DB::table('calculopro')->where('id', $request->id)->first()){
-                // borrar un calculo
-                DB::table('calculopro')->where('id', $request->id)->delete();
-                
-                return [
-                    'success' => 1 // calculo eliminado
-                ];
-            }else{
-                return [
-                    'success' => 2 // calculo no encontrado
-                ];
-                }
+                if($datos = DB::table('calculopro')->where('id', $request->id)->first()){
+                    // borrar un calculo
+                    DB::table('calculopro')->where('id', $request->id)->delete();
+                    
+                        return [
+                            'success' => 1 // calculo eliminado
+                        ];
+                }else{
+                        return [
+                            'success' => 2 // calculo no encontrado
+                        ];
+                    }
             }
         }
 }
