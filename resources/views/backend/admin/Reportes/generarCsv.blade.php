@@ -45,7 +45,7 @@
                   </div> 
                 </div> 
                 <div class="card-footer">
-                  <span data-href="/tasks" id="export" class="btn btn-success float-right" onclick="exportTasks(event.target);">Generar</span>
+                  <span data-href="/tasks" id="export" class="btn btn-success float-right" onclick="exportTasks();">Generar</span>
                 </div> 
               </form>
              </div>
@@ -122,10 +122,10 @@ function mensajeResponse2(valor){
 }
 </script>
 <script>
-   function exportTasks(_this) {
-      let _url = $(_this).data('href');
+   function exportTasks() {
+     // let _url = $(_this).data('href');
       var fecha = document.getElementById('fecha').value;
-      window.location.href = _url+'/'+fecha;
+      window.location.href ='/tasks/'+fecha;
    }
 </script>
 @stop
