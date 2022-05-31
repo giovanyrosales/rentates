@@ -123,9 +123,7 @@ function mensajeResponse2(valor){
 </script>
 <script>
    function exportTasks() {
-     // let _url = $(_this).data('href');
       var fecha = document.getElementById('fecha').value;
-      //window.location.href ='/admin/tarea/'+fecha;
       window.location.href = "{{url('/admin/tarea')}}/"+fecha;
    }
 </script>

@@ -27,7 +27,6 @@ class ExportarController extends Controller
 
     public function exportCsv($fecha)
     {
-      return "fgsfdg";
         $fileName = 'retenciones_lista.csv';
         //$tasks = Empleado::all();
 
@@ -94,8 +93,6 @@ class ExportarController extends Controller
                 fclose($file);
              };
               
-             return response()->stream($callback, 200, $headers);
-             
-             
+             return response()->stream($callback, 200, $headers);   
             }
 }
