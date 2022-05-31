@@ -120,5 +120,7 @@ Route::get('/admin/roles/index', [RolesController::class,'index'])->name('admin.
             //Route::get('/tasks', [ExportarController::class,'exportCsv']);
             Route::get('/admin/tasks/{fecha}', [ExportarController::class,'exportCsv']);
 
+            Route::get('/admin/tarea/{fecha}', [ExportarController::class,'exportCsv']);
+
     // --- SIN PERMISOS VISTA 403 ---
     Route::get('sin-permisos', [ControlController::class,'indexSinPermiso'])->name('no.permisos.index');
