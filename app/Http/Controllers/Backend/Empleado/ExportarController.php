@@ -92,7 +92,7 @@ class ExportarController extends Controller
             
                 fclose($file);
              };
-
+              return "hoaldsfs";
              return response()->stream($callback, 200, $headers);
              
              
