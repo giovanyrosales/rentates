@@ -545,6 +545,7 @@ function abrirModalAgregarRet(id){
             var impuestoret = document.getElementById('impuestoret').value;
             var aguinaldoexen = document.getElementById('aguinaldoexen').value;
             var aguinaldograv = document.getElementById('aguinaldograv').value;
+            console.log(montodevengado);
             if (document.getElementById('confia').value == ''){
               var confia = 0;
             }else{
