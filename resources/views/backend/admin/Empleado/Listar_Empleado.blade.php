@@ -515,12 +515,47 @@ function abrirModalAgregarRet(id){
  function enviarModalRet(){
             var codigoret_id = document.getElementById('codigoret_id').value;
             var fecharet = document.getElementById('fecharet').value;
-            var montodevengado = document.getElementById('sueldo').value + document.getElementById('vacaciones').value + document.getElementById('horasextra').value + document.getElementById('incapacidades').value + document.getElementById('otrosingresos').value;
+            if (document.getElementById('sueldo').value == ''){
+              var sueldo = 0;
+            }else{
+              var sueldo = document.getElementById('sueldo').value;
+            }
+            if (document.getElementById('vacaciones').value == ''){
+              var sueldo = 0;
+            }else{
+              var sueldo = document.getElementById('vacaciones').value;
+            }
+            if (document.getElementById('horasextra').value == ''){
+              var sueldo = 0;
+            }else{
+              var sueldo = document.getElementById('horasextra').value;
+            }
+            if (document.getElementById('incapacidades').value == ''){
+              var sueldo = 0;
+            }else{
+              var sueldo = document.getElementById('incapacidades').value;
+            }
+            if (document.getElementById('otrosingresos').value == ''){
+              var sueldo = 0;
+            }else{
+              var sueldo = document.getElementById('otrosingresos').value;
+            }
+            var montodevengado = sueldo + vacaciones + horasextra + incapacidades + otrosingresos;
             var devengadobono;
             var impuestoret = document.getElementById('impuestoret').value;
             var aguinaldoexen = document.getElementById('aguinaldoexen').value;
             var aguinaldograv = document.getElementById('aguinaldograv').value;
-            var afp = document.getElementById('confia').value + document.getElementById('crecer').value;
+            if (document.getElementById('confia').value == ''){
+              var confia = 0;
+            }else{
+              var confia = document.getElementById('confia').value;
+            }
+            if (document.getElementById('crecer').value == ''){
+              var crecer = 0;
+            }else{
+              var crecer = document.getElementById('crecer').value;
+            }
+            var afp = confia + crecer;
             var isss = document.getElementById('isss').value;
             var inpep = document.getElementById('inpep').value;
             var ipsfa = document.getElementById('ipsfa').value;
