@@ -118,7 +118,7 @@ Route::get('/admin/roles/index', [RolesController::class,'index'])->name('admin.
             //Reportes
             Route::get("/admin/reporte/generar", [ExportarController::class, "index"])->name('admin.reportes.index');
             //Route::get('/tasks', [ExportarController::class,'exportCsv']);
-            Route::get('/admin/tasks/{fecha}', [ExportarController::class,'exportCsv']);
+            //Route::get('/admin/tasks/{fecha}', [ExportarController::class,'exportCsv']);
 
             Route::get('/admin/tarea/{fecha}', [ExportarController::class,'exportCsv']);
 

@@ -179,7 +179,7 @@ public function update_empleado(Request $request){
                 'empleado_id'=>$request->id,
                 'fecharet'=>$request->fecharet,
                 'montodevengado'=>$request->montodevengado,
-                'devengadobono'=>NULL,
+                'devengadobono'=>0.00,
                 'impuestoret'=>$request->impuestoret,
                 'aguinaldoexen'=>$request->aguinaldoexen,
                 'aguinaldograv'=>$request->aguinaldograv,
@@ -194,9 +194,9 @@ public function update_empleado(Request $request){
                 'otrosingresos'=>$request->otrosingresos,
                 'confia'=>$request->confia,
                 'crecer'=>$request->crecer,
-                'cefafa'=>NULL,
-                'bienmagis'=>NULL,
-                'isssivm'=>NULL]); 
+                'cefafa'=>0.00,
+                'bienmagis'=>0.00,
+                'isssivm'=>0.00]); 
 
         if($registrarret){               
                 return [
@@ -243,7 +243,7 @@ public function update_empleado(Request $request){
             if($area = DB::table('calculoemp')->where('id', $request->id)->first()){                        
 
                 
-                    DB::table('calculoemp')->where('id', '=', $request->id)->update(['codigoret_id' => $request->codigoret_id, 'fecharet' => $request->fecharet,'montodevengado' => $request->montodevengado, 'devengadobono' => NULL, 'impuestoret' => $request->impuestoret, 'aguinaldoexen' => $request->aguinaldoexen, 'aguinaldograv' => $request->aguinaldograv, 'afp' => $request->afp, 'isss' => $request->isss, 'inpep' => $request->inpep, 'ipsfa' => $request->ipsfa, 'cefafa' => NULL, 'bienmagis' => NULL, 'isssivm' => NULL, 'sueldo' => $request->sueldo, 'vacaciones' => $request->vacaciones, 'horasextra' => $request->horasextra, 'incapacidades' => $request->incapacidades, 'otrosingresos' => $request->otrosingresos, 'confia' => $request->confia, 'crecer' => $request->crecer]);
+                    DB::table('calculoemp')->where('id', '=', $request->id)->update(['codigoret_id' => $request->codigoret_id, 'fecharet' => $request->fecharet,'montodevengado' => $request->montodevengado, 'devengadobono' => 0.00, 'impuestoret' => $request->impuestoret, 'aguinaldoexen' => $request->aguinaldoexen, 'aguinaldograv' => $request->aguinaldograv, 'afp' => $request->afp, 'isss' => $request->isss, 'inpep' => $request->inpep, 'ipsfa' => $request->ipsfa, 'cefafa' => 0.00, 'bienmagis' => 0.00, 'isssivm' => 0.00, 'sueldo' => $request->sueldo, 'vacaciones' => $request->vacaciones, 'horasextra' => $request->horasextra, 'incapacidades' => $request->incapacidades, 'otrosingresos' => $request->otrosingresos, 'confia' => $request->confia, 'crecer' => $request->crecer]);
                     
                     return [
                         'success' => 1 // datos guardados correctamente

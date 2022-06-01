@@ -34,7 +34,8 @@ class ExportarController extends Controller
           $endDate =  $fecha.'-30';
 
           $porcionesfec = explode("-", $fecha);
-          $periodo = ltrim($porcionesfec[1].$porcionesfec[0],'0');
+          //$periodo = ltrim($porcionesfec[1].$porcionesfec[0],'0');
+          $periodo = $porcionesfec[1].$porcionesfec[0];
          // Log:info ($periodo);
       
         $tasks1 = CalculoEmp::whereBetween('fecharet', [$startDate, $endDate])->get();
@@ -75,7 +76,7 @@ class ExportarController extends Controller
                 $paisdata = CodigoPais::where('id', $empleadodata['codigopais_id'])->first();
                 $codigodata = Codigoret::where('id', $row['codigoret_id'])->first();
 
-              fputcsv($file, array($empleadodata['domiciliado'], $paisdata['codigo'], strtoupper($empleadodata['apellido']).' '.strtoupper($empleadodata['nombre']), $empleadodata['nit'],$empleadodata['dui'], $codigodata['codigo'],$row['montodevengado'], $row['devengadobono'], $row['impuestoret'], $row['aguinaldoexen'], $row['aguinaldograv'], $row['afp'], $row['isss'], $row['inpep'], $row['ipsfa'], $row['cefafa'], $row['bienmagis'], $row['isssivm'], $periodo), ';');
+              fputcsv($file, array($empleadodata['domiciliado'], $paisdata['codigo'], strtoupper($empleadodata['apellido'].' '.$empleadodata['nombre']), $empleadodata['nit'],$empleadodata['dui'], $codigodata['codigo'],$row['montodevengado'], $row['devengadobono'], $row['impuestoret'], $row['aguinaldoexen'], $row['aguinaldograv'], $row['afp'], $row['isss'], $row['inpep'], $row['ipsfa'], $row['cefafa'], $row['bienmagis'], $row['isssivm'], $periodo), ';');
            }  
                 foreach ($tasks2 as $task2) {
                   $row['proveedor_id']  = $task2->proveedor_id;
