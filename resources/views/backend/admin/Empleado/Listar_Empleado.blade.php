@@ -521,24 +521,24 @@ function abrirModalAgregarRet(id){
               var sueldo = document.getElementById('sueldo').value;
             }
             if (document.getElementById('vacaciones').value == ''){
-              var sueldo = 0;
+              var vacaciones = 0;
             }else{
-              var sueldo = document.getElementById('vacaciones').value;
+              var vacaciones = document.getElementById('vacaciones').value;
             }
             if (document.getElementById('horasextra').value == ''){
-              var sueldo = 0;
+              var horasextra = 0;
             }else{
-              var sueldo = document.getElementById('horasextra').value;
+              var horasextra = document.getElementById('horasextra').value;
             }
             if (document.getElementById('incapacidades').value == ''){
-              var sueldo = 0;
+              var incapacidades = 0;
             }else{
-              var sueldo = document.getElementById('incapacidades').value;
+              var incapacidades = document.getElementById('incapacidades').value;
             }
             if (document.getElementById('otrosingresos').value == ''){
-              var sueldo = 0;
+              var otrosingresos = 0;
             }else{
-              var sueldo = document.getElementById('otrosingresos').value;
+              var otrosingresos = document.getElementById('otrosingresos').value;
             }
             var montodevengado = sueldo + vacaciones + horasextra + incapacidades + otrosingresos;
             var devengadobono;
