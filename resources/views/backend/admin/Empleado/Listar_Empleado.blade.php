@@ -515,7 +515,7 @@ function abrirModalAgregarRet(id){
  function enviarModalRet(){
             var codigoret_id = document.getElementById('codigoret_id').value;
             var fecharet = document.getElementById('fecharet').value;
-            var montodevengado = parseFloat(document.getElementById('sueldo').value) + parseFloat(document.getElementById('vacaciones').value) + parseFloat(document.getElementById('horasextra').value) + parseFloat(document.getElementById('incapacidades').value) + parseFloat(document.getElementById('otrosingresos').value);
+            var montodevengado = document.getElementById('sueldo').value + document.getElementById('vacaciones').value + document.getElementById('horasextra').value + document.getElementById('incapacidades').value + document.getElementById('otrosingresos').value;
             var devengadobono;
             var impuestoret = document.getElementById('impuestoret').value;
             var aguinaldoexen = document.getElementById('aguinaldoexen').value;
