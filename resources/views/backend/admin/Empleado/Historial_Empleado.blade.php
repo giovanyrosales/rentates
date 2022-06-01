@@ -87,8 +87,15 @@
           </div>
           <div class="modal-body">
             <form id="formularior">
+              
               <div class="card-body">
                 <div class="row">  
+                <div class="col-md-2"> 
+                    <div class="form-group">
+                        <label>Fecha de Retención:</label>   
+                        <input type="date" class="form-control" id="fecharet" name="fecharet" placeholder="Fecha de Retención">
+                    </div>
+                  </div>
                   <div class="col-md-4"> 
                     <div class="form-group">
                           <label>DUI:</label>   
@@ -96,7 +103,7 @@
                           <input type="text" class="form-control" id="dui" name="dui" value="{{$empleado->dui}}" readonly >
                     </div>
                   </div>  
-                  <div class="col-md-6">
+                  <div class="col-md-5">
                     <div class="form-group">
                           <label>Nombre:</label>   
                           <input type="text" class="form-control" id="nombrer" name="nombrer" value="{{$empleado->nombre}}" readonly>
@@ -104,102 +111,103 @@
                   </div>
                 </div> 
                 <div class="row">  
-                  <div class="col-md-4"> 
-                    <div class="form-group">
-                        <label>Fecha de Retención:</label>   
-                        <input type="date" class="form-control" id="fecharet" name="fecharet" placeholder="Fecha de Retención">
-                    </div>
-                  </div>
+                  
                   <div class="col-md-5">
                     <div class="form-group">
                         <label>Código de Retención:</label>   <br>
                         <select class="form-control codigoret_id" id="codigoret_id" name="codigoret_id">
                           @foreach($codigoret as $sel)
-                          <option value="{{ $sel->id }}">{{$sel->nombre}}</option>
+                          <option value="{{ $sel->id }}">{{ $sel->codigo }} {{ $sel->nombre }}</option>
                           @endforeach
                         </select>
                     </div>
                   </div>
-                </div>   
-                <div class="row">  
-                <div class="col-md-4"> 
+                </div><div class="row">  
+                  <div class="col-md-3"> 
                     <div class="form-group">
-                        <label>Devengado:</label>   
-                        <input type="number" class="form-control" step="any" id="montodevengado" name="montodevengado" placeholder="Devengado">
+                        <label>Sueldo:</label>   
+                        <input type="number" class="form-control" step="any" id="sueldo" name="sueldo" placeholder="Sueldo" value="0.00">
                     </div>     
                   </div> 
-                  <div class="col-md-4"> 
+                  <div class="col-md-3"> 
                     <div class="form-group">
-                        <label>Devengado Bono:</label>   
-                        <input type="number" class="form-control" step="any" id="devengadobono" name="devengadobono" placeholder="Devengado Bono">
+                        <label>Vacaciones:</label>   
+                        <input type="number" class="form-control" step="any" id="vacaciones" name="vacaciones" placeholder="Vacaciones" value="0.00">
                     </div>     
                   </div> 
-                  <div class="col-md-4"> 
+                  <div class="col-md-3"> 
                     <div class="form-group">
-                        <label>Impuesto Ret.:</label>   
-                        <input type="number" class="form-control" step="any" id="impuestoret" name="impuestoret" placeholder="Impuesto Ret">
+                        <label>Horas Extra:</label>   
+                        <input type="number" class="form-control" step="any" id="horasextra" name="horasextra" placeholder="Horas Extra" value="0.00">
                     </div>     
                   </div> 
-                </div> 
-                <div class="row">  
-                <div class="col-md-4"> 
+                  <div class="col-md-3"> 
+                    <div class="form-group">
+                        <label>Incapacidades:</label>   
+                        <input type="number" class="form-control" step="any" id="incapacidades" name="incapacidades" placeholder="Incapacidades" value="0.00">
+                    </div>     
+                  </div> 
+                </div>    
+                <div class="row">
+                <div class="col-md-3"> 
                     <div class="form-group">
                         <label>Aguinaldo Exento:</label>   
-                        <input type="number" class="form-control" step="any" id="aguinaldoexen" name="aguinaldoexeni" placeholder="Aguinaldo Exento">
+                        <input type="number" class="form-control" step="any" id="aguinaldoexen" name="aguinaldoexeni" placeholder="Aguinaldo Exento" value="0.00">
                     </div>     
                   </div> 
-                  <div class="col-md-4"> 
+                  <div class="col-md-3"> 
                     <div class="form-group">
                         <label>Aguinaldo Gravado:</label>   
-                        <input type="number" class="form-control" step="any" id="aguinaldograv" name="aguinaldograv" placeholder="Aguinaldo Gravado">
+                        <input type="number" class="form-control" step="any" id="aguinaldograv" name="aguinaldograv" placeholder="Aguinaldo Gravado" value="0.00">
+                    </div>     
+                  </div>   
+                  <div class="col-md-3"> 
+                    <div class="form-group">
+                        <label>Otros Ingresos:</label>   
+                        <input type="number" class="form-control" step="any" id="otrosingresos" name="otrosingresos" placeholder="Otros Ingresos" value="0.00">
                     </div>     
                   </div> 
-                  <div class="col-md-4"> 
+                  <div class="col-md-3"> 
                     <div class="form-group">
-                        <label>Bien Mag.:</label>   
-                        <input type="number" class="form-control" step="any" id="bienmagis" name="bienmagis" placeholder="Bien Magisterial">
+                        <label>Impuesto Ret.:</label>   
+                        <input type="number" class="form-control" step="any" id="impuestoret" name="impuestoret" placeholder="Impuesto Ret" value="0.00">
                     </div>     
                   </div> 
                 </div> 
                 <div class="row">  
-                  <div class="col-md-4">     
+                  <div class="col-md-3">     
                     <div class="form-group">
-                        <label>AFP:</label>   
-                        <input type="number" class="form-control"  step="any" id="afp" name="afp" placeholder="AFP">
+                        <label>CONFIA:</label>   
+                        <input type="number" class="form-control"  step="any" id="confia" name="confia" placeholder="AFP" value="0.00">
+                    </div>
+                  </div> 
+                  <div class="col-md-3">     
+                    <div class="form-group">
+                        <label>CRECER:</label>   
+                        <input type="number" class="form-control"  step="any" id="crecer" name="crecer" placeholder="AFP" value="0.00">
                     </div>
                   </div>  
-                  <div class="col-md-4">   
+                  <div class="col-md-3">   
                     <div class="form-group">
                         <label>ISSS:</label>   
-                        <input type="number" class="form-control" step="any" id="isss" name="isss" placeholder="ISSS">
+                        <input type="number" class="form-control" step="any" id="isss" name="isss" placeholder="ISSS" value="0.00">
                     </div> 
                   </div> 
-                  <div class="col-md-4">   
-                    <div class="form-group">
-                        <label>INPEP:</label>   
-                        <input type="number" class="form-control"   step="any" id="inpep" name="inpep" placeholder="INPEP">
-                    </div> 
-                  </div>
+                 
                 </div> 
                 <div class="row">  
-                  <div class="col-md-4">     
+                  <div class="col-md-3">     
                     <div class="form-group">
                         <label>IPSFA:</label>   
-                        <input type="number" class="form-control"  step="any" id="ipsfa" name="ipsfa" placeholder="IPSFA">
+                        <input type="number" class="form-control"  step="any" id="ipsfa" name="ipsfa" placeholder="IPSFA" value="0.00">
                     </div>
                   </div>  
-                  <div class="col-md-4">   
+                  <div class="col-md-3">   
                     <div class="form-group">
-                        <label>CEFAFA:</label>   
-                        <input type="number" class="form-control" step="any" id="cefafa" name="cefafa" placeholder="CEFAFA">
+                        <label>INPEP:</label>   
+                        <input type="number" class="form-control"   step="any" id="inpep" name="inpep" placeholder="INPEP" value="0.00">
                     </div> 
-                  </div> 
-                  <div class="col-md-4">   
-                    <div class="form-group">
-                        <label>ISSS ivm:</label>   
-                        <input type="number" class="form-control"   step="any" id="isssivm" name="isssivm" placeholder="ISSS IVM">
-                    </div> 
-                  </div>
+                  </div>  
                 </div> 
               </div>
             </form>
@@ -271,17 +279,24 @@ function abrirModalEditRet(id){
           $('#fecharet').val(response.data.historial.fecharet); 
           $('#codigoret_id').val(response.data.historial.codigoret_id);  
           $('#montodevengado').val(response.data.historial.montodevengado);  
-          $('#devengadobono').val(response.data.historial.devengadobono);  
+          //$('#devengadobono').val(response.data.historial.devengadobono);  
           $('#impuestoret').val(response.data.historial.impuestoret);  
           $('#aguinaldoexen').val(response.data.historial.aguinaldoexen);  
           $('#aguinaldograv').val(response.data.historial.aguinaldograv);  
           $('#afp').val(response.data.historial.afp);  
           $('#isss').val(response.data.historial.isss);  
           $('#inpep').val(response.data.historial.inpep);  
-          $('#ipsfa').val(response.data.historial.ipsfa);  
-          $('#cefafa').val(response.data.historial.cefafa);   
-          $('#bienmagis').val(response.data.historial.bienmagis);   
-          $('#isssivm').val(response.data.historial.isssivm);   
+          $('#ipsfa').val(response.data.historial.ipsfa); 
+          $('#sueldo').val(response.data.historial.sueldo);  
+          $('#vacaciones').val(response.data.historial.vacaciones); 
+          $('#horasextra').val(response.data.historial.horasextra); 
+          $('#incapacidades').val(response.data.historial.incapacidades); 
+          $('#otrosingresos').val(response.data.historial.otrosingresos); 
+          $('#confia').val(response.data.historial.confia); 
+          $('#crecer').val(response.data.historial.crecer); 
+          //$('#cefafa').val(response.data.historial.cefafa);   
+          //$('#bienmagis').val(response.data.historial.bienmagis);   
+          //$('#isssivm').val(response.data.historial.isssivm);   
         }else{ 
           toastr.error('Error', 'Retencion de Empleado no encontrado'); 
         }
@@ -295,18 +310,26 @@ function abrirModalEditRet(id){
     function enviarModalEditRet(){
             var codigoret_id = document.getElementById('codigoret_id').value;
             var fecharet = document.getElementById('fecharet').value;
-            var montodevengado = document.getElementById('montodevengado').value;
-            var devengadobono = document.getElementById('devengadobono').value;
+                var sueldo = parseFloat(document.getElementById('sueldo').value);
+                var vacaciones = parseFloat(document.getElementById('vacaciones').value);
+                var horasextra = parseFloat(document.getElementById('horasextra').value);
+                var incapacidades = parseFloat(document.getElementById('incapacidades').value);
+                var otrosingresos = parseFloat(document.getElementById('otrosingresos').value);
+                var confia = parseFloat(document.getElementById('confia').value);
+                var crecer = parseFloat(document.getElementById('crecer').value);
+            var montodevengado = sueldo + vacaciones + horasextra + incapacidades + otrosingresos;
+            var devengadobono;
             var impuestoret = document.getElementById('impuestoret').value;
             var aguinaldoexen = document.getElementById('aguinaldoexen').value;
             var aguinaldograv = document.getElementById('aguinaldograv').value;
-            var afp = document.getElementById('afp').value;
+            var afp = confia + crecer;
             var isss = document.getElementById('isss').value;
             var inpep = document.getElementById('inpep').value;
             var ipsfa = document.getElementById('ipsfa').value;
-            var cefafa = document.getElementById('cefafa').value;
-            var bienmagis = document.getElementById('bienmagis').value;
-            var isssivm = document.getElementById('isssivm').value;
+            var cefafa;
+            var bienmagis;
+            var isssivm;
+              
             var id = document.getElementById('idU').value;
 
    
@@ -327,6 +350,14 @@ function abrirModalEditRet(id){
       formData.append('cefafa', cefafa);
       formData.append('bienmagis', bienmagis);
       formData.append('isssivm', isssivm);
+        formData.append('sueldo', sueldo);
+        formData.append('vacaciones', vacaciones);
+        formData.append('horasextra', horasextra);
+        formData.append('incapacidades', incapacidades);
+        formData.append('otrosingresos', otrosingresos);
+        formData.append('confia', confia);
+        formData.append('crecer', crecer);
+
       formData.append('id', id);
       
 

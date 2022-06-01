@@ -30,6 +30,14 @@ class CreateCalculoempTable extends Migration
             $table->decimal('isssivm', 8, 2)->nullable();
             $table->bigInteger('empleado_id')->unsigned();
             $table->bigInteger('codigoret_id')->unsigned();
+
+            $table->decimal('sueldo', 8, 2)->nullable();
+            $table->decimal('vacaciones', 8, 2)->nullable();
+            $table->decimal('crecer', 8, 2)->nullable();
+            $table->decimal('horasextra', 8, 2)->nullable();
+            $table->decimal('incapacidades', 8, 2)->nullable();
+            $table->decimal('otrosingresos', 8, 2)->nullable();
+            $table->decimal('confia', 8, 2)->nullable();
             $table->timestamps();
 
             $table->foreign('empleado_id')->references('id')->on('empleado');

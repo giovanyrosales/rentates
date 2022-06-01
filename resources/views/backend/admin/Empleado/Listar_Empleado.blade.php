@@ -267,7 +267,7 @@
                     <div class="form-group">
                           <label>DUI:</label>   
                           <input type="hidden" id="idUr"  name="idUr"/>  
-                          <input type="text" class="form-control" id="duir" name="duir" readonly placeholder="Número de Identificación Tributaria">
+                          <input type="text" class="form-control" id="duir" name="duir" readonly placeholder="Documento Unico">
                     </div>
                   </div>  
                   <div class="col-md-5">
@@ -293,25 +293,25 @@
                   <div class="col-md-3"> 
                     <div class="form-group">
                         <label>Sueldo:</label>   
-                        <input type="number" class="form-control" step="any" id="sueldo" name="sueldo" placeholder="Sueldo">
+                        <input type="number" class="form-control" step="any" id="sueldo" name="sueldo" placeholder="Sueldo" value="0.00">
                     </div>     
                   </div> 
                   <div class="col-md-3"> 
                     <div class="form-group">
                         <label>Vacaciones:</label>   
-                        <input type="number" class="form-control" step="any" id="vacaciones" name="vacaciones" placeholder="Vacaciones">
+                        <input type="number" class="form-control" step="any" id="vacaciones" name="vacaciones" placeholder="Vacaciones" value="0.00">
                     </div>     
                   </div> 
                   <div class="col-md-3"> 
                     <div class="form-group">
                         <label>Horas Extra:</label>   
-                        <input type="number" class="form-control" step="any" id="horasextra" name="horasextra" placeholder="Horas Extra">
+                        <input type="number" class="form-control" step="any" id="horasextra" name="horasextra" placeholder="Horas Extra" value="0.00">
                     </div>     
                   </div> 
                   <div class="col-md-3"> 
                     <div class="form-group">
                         <label>Incapacidades:</label>   
-                        <input type="number" class="form-control" step="any" id="incapacidades" name="incapacidades" placeholder="Incapacidades">
+                        <input type="number" class="form-control" step="any" id="incapacidades" name="incapacidades" placeholder="Incapacidades" value="0.00">
                     </div>     
                   </div> 
                 </div>    
@@ -319,25 +319,25 @@
                 <div class="col-md-3"> 
                     <div class="form-group">
                         <label>Aguinaldo Exento:</label>   
-                        <input type="number" class="form-control" step="any" id="aguinaldoexen" name="aguinaldoexeni" placeholder="Aguinaldo Exento">
+                        <input type="number" class="form-control" step="any" id="aguinaldoexen" name="aguinaldoexeni" placeholder="Aguinaldo Exento" value="0.00">
                     </div>     
                   </div> 
                   <div class="col-md-3"> 
                     <div class="form-group">
                         <label>Aguinaldo Gravado:</label>   
-                        <input type="number" class="form-control" step="any" id="aguinaldograv" name="aguinaldograv" placeholder="Aguinaldo Gravado">
+                        <input type="number" class="form-control" step="any" id="aguinaldograv" name="aguinaldograv" placeholder="Aguinaldo Gravado" value="0.00">
                     </div>     
                   </div>   
                   <div class="col-md-3"> 
                     <div class="form-group">
                         <label>Otros Ingresos:</label>   
-                        <input type="number" class="form-control" step="any" id="otrosingresos" name="otrosingresos" placeholder="Otros Ingresos">
+                        <input type="number" class="form-control" step="any" id="otrosingresos" name="otrosingresos" placeholder="Otros Ingresos" value="0.00">
                     </div>     
                   </div> 
                   <div class="col-md-3"> 
                     <div class="form-group">
                         <label>Impuesto Ret.:</label>   
-                        <input type="number" class="form-control" step="any" id="impuestoret" name="impuestoret" placeholder="Impuesto Ret">
+                        <input type="number" class="form-control" step="any" id="impuestoret" name="impuestoret" placeholder="Impuesto Ret" value="0.00">
                     </div>     
                   </div> 
                 </div> 
@@ -345,19 +345,19 @@
                   <div class="col-md-3">     
                     <div class="form-group">
                         <label>CONFIA:</label>   
-                        <input type="number" class="form-control"  step="any" id="confia" name="confia" placeholder="AFP">
+                        <input type="number" class="form-control"  step="any" id="confia" name="confia" placeholder="AFP" value="0.00">
                     </div>
                   </div> 
                   <div class="col-md-3">     
                     <div class="form-group">
                         <label>CRECER:</label>   
-                        <input type="number" class="form-control"  step="any" id="crecer" name="crecer" placeholder="AFP">
+                        <input type="number" class="form-control"  step="any" id="crecer" name="crecer" placeholder="AFP" value="0.00">
                     </div>
                   </div>  
                   <div class="col-md-3">   
                     <div class="form-group">
                         <label>ISSS:</label>   
-                        <input type="number" class="form-control" step="any" id="isss" name="isss" placeholder="ISSS">
+                        <input type="number" class="form-control" step="any" id="isss" name="isss" placeholder="ISSS" value="0.00">
                     </div> 
                   </div> 
                  
@@ -366,13 +366,13 @@
                   <div class="col-md-3">     
                     <div class="form-group">
                         <label>IPSFA:</label>   
-                        <input type="number" class="form-control"  step="any" id="ipsfa" name="ipsfa" placeholder="IPSFA">
+                        <input type="number" class="form-control"  step="any" id="ipsfa" name="ipsfa" placeholder="IPSFA" value="0.00">
                     </div>
                   </div>  
                   <div class="col-md-3">   
                     <div class="form-group">
                         <label>INPEP:</label>   
-                        <input type="number" class="form-control"   step="any" id="inpep" name="inpep" placeholder="INPEP">
+                        <input type="number" class="form-control"   step="any" id="inpep" name="inpep" placeholder="INPEP" value="0.00">
                     </div> 
                   </div>  
                 </div> 
@@ -482,8 +482,8 @@
 
   <script>
 //*********************** Para darle tiempo al toaster al recargar la pagina */
-toastr.options.timeOut = 1500;
-    toastr.options.fadeOut = 1500;
+toastr.options.timeOut = 1800;
+    toastr.options.fadeOut = 1800;
     toastr.options.onHidden = function(){
       // this will be executed after fadeout, i.e. 2secs after notification has been show
      window.location.reload();
@@ -515,47 +515,22 @@ function abrirModalAgregarRet(id){
  function enviarModalRet(){
             var codigoret_id = document.getElementById('codigoret_id').value;
             var fecharet = document.getElementById('fecharet').value;
-            if (document.getElementById('sueldo').value == ''){
-              var sueldo = 0;
-            }else{
-              var sueldo = parseFloat(document.getElementById('sueldo').value);
-            }
-            if (document.getElementById('vacaciones').value == ''){
-              var vacaciones = 0;
-            }else{
-              var vacaciones = parseFloat(document.getElementById('vacaciones').value);
-            }
-            if (document.getElementById('horasextra').value == ''){
-              var horasextra = 0;
-            }else{
-              var horasextra = parseFloat(document.getElementById('horasextra').value);
-            }
-            if (document.getElementById('incapacidades').value == ''){
-              var incapacidades = 0;
-            }else{
-              var incapacidades = parseFloat(document.getElementById('incapacidades').value);
-            }
-            if (document.getElementById('otrosingresos').value == ''){
-              var otrosingresos = 0;
-            }else{
-              var otrosingresos = parseFloat(document.getElementById('otrosingresos').value);
-            }
+            
+                var sueldo = parseFloat(document.getElementById('sueldo').value);
+                var vacaciones = parseFloat(document.getElementById('vacaciones').value);
+                var horasextra = parseFloat(document.getElementById('horasextra').value);
+                var incapacidades = parseFloat(document.getElementById('incapacidades').value);
+                var otrosingresos = parseFloat(document.getElementById('otrosingresos').value);
+          
             var montodevengado = sueldo + vacaciones + horasextra + incapacidades + otrosingresos;
             var devengadobono;
             var impuestoret = document.getElementById('impuestoret').value;
             var aguinaldoexen = document.getElementById('aguinaldoexen').value;
             var aguinaldograv = document.getElementById('aguinaldograv').value;
             
-            if (document.getElementById('confia').value == ''){
-              var confia = 0;
-            }else{
               var confia = parseFloat(document.getElementById('confia').value);
-            }
-            if (document.getElementById('crecer').value == ''){
-              var crecer = 0;
-            }else{
               var crecer = parseFloat(document.getElementById('crecer').value);
-            }
+
             var afp = confia + crecer;
             var isss = document.getElementById('isss').value;
             var inpep = document.getElementById('inpep').value;
@@ -584,7 +559,14 @@ function abrirModalAgregarRet(id){
       formData.append('bienmagis', bienmagis);
       formData.append('isssivm', isssivm);
       formData.append('id', id);
-      
+
+      formData.append('sueldo', sueldo);
+      formData.append('vacaciones', vacaciones);
+      formData.append('horasextra', horasextra);
+      formData.append('incapacidades', incapacidades);
+      formData.append('otrosingresos', otrosingresos);
+      formData.append('confia', confia);
+      formData.append('crecer', crecer);
 
       axios.post(url+'empleado/registroret_emp', formData, {  
        })
@@ -625,7 +607,7 @@ function enviarTablaRet(){
 
         // como tienen la misma cantidad de filas, podemos recorrer
         // todas las filas de una vez
-       console.log(codigoret_id);
+       //console.log(codigoret_id);
         for(var p = 0; p < id.length; p++){
             
             formData.append('empleado_id[]', id[p]);

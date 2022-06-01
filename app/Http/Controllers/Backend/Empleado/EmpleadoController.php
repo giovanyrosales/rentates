@@ -187,6 +187,13 @@ public function update_empleado(Request $request){
                 'isss'=>$request->isss,
                 'inpep'=>$request->inpep,
                 'ipsfa'=>$request->ipsfa,
+                'sueldo'=>$request->sueldo,
+                'vacaciones'=>$request->vacaciones,
+                'horasextra'=>$request->horasextra,
+                'incapacidades'=>$request->incapacidades,
+                'otrosingresos'=>$request->otrosingresos,
+                'confia'=>$request->confia,
+                'crecer'=>$request->crecer,
                 'cefafa'=>NULL,
                 'bienmagis'=>NULL,
                 'isssivm'=>NULL]); 
@@ -236,7 +243,7 @@ public function update_empleado(Request $request){
             if($area = DB::table('calculoemp')->where('id', $request->id)->first()){                        
 
                 
-                    DB::table('calculoemp')->where('id', '=', $request->id)->update(['codigoret_id' => $request->codigoret_id, 'fecharet' => $request->fecharet,'montodevengado' => $request->montodevengado, 'devengadobono' => $request->devengadobono, 'impuestoret' => $request->impuestoret, 'aguinaldoexen' => $request->aguinaldoexen, 'aguinaldograv' => $request->aguinaldograv, 'afp' => $request->afp, 'isss' => $request->isss, 'inpep' => $request->inpep, 'ipsfa' => $request->ipsfa, 'cefafa' => $request->cefafa, 'bienmagis' => $request->bienmagis, 'isssivm' => $request->isssivm]);
+                    DB::table('calculoemp')->where('id', '=', $request->id)->update(['codigoret_id' => $request->codigoret_id, 'fecharet' => $request->fecharet,'montodevengado' => $request->montodevengado, 'devengadobono' => NULL, 'impuestoret' => $request->impuestoret, 'aguinaldoexen' => $request->aguinaldoexen, 'aguinaldograv' => $request->aguinaldograv, 'afp' => $request->afp, 'isss' => $request->isss, 'inpep' => $request->inpep, 'ipsfa' => $request->ipsfa, 'cefafa' => NULL, 'bienmagis' => NULL, 'isssivm' => NULL, 'sueldo' => $request->sueldo, 'vacaciones' => $request->vacaciones, 'horasextra' => $request->horasextra, 'incapacidades' => $request->incapacidades, 'otrosingresos' => $request->otrosingresos, 'confia' => $request->confia, 'crecer' => $request->crecer]);
                     
                     return [
                         'success' => 1 // datos guardados correctamente

@@ -124,7 +124,7 @@ class ImportarController extends Controller
     }
 
 
-    // editar Registro de retencion especifico
+    // Registro de retencion especifico
     public function registrolistret_emp(Request $request){
         DB::beginTransaction();
 
