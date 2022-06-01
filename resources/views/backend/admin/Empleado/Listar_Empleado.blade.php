@@ -520,7 +520,7 @@ function abrirModalAgregarRet(id){
             var impuestoret = document.getElementById('impuestoret').value;
             var aguinaldoexen = document.getElementById('aguinaldoexen').value;
             var aguinaldograv = document.getElementById('aguinaldograv').value;
-            var afp = parseFloat(document.getElementById('confia').value) + parseFloat(document.getElementById('crecer').value);
+            var afp = document.getElementById('confia').value + document.getElementById('crecer').value;
             var isss = document.getElementById('isss').value;
             var inpep = document.getElementById('inpep').value;
             var ipsfa = document.getElementById('ipsfa').value;
