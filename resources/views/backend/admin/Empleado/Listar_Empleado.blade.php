@@ -545,16 +545,16 @@ function abrirModalAgregarRet(id){
             var impuestoret = document.getElementById('impuestoret').value;
             var aguinaldoexen = document.getElementById('aguinaldoexen').value;
             var aguinaldograv = document.getElementById('aguinaldograv').value;
-            console.log(montodevengado);
+            
             if (document.getElementById('confia').value == ''){
               var confia = 0;
             }else{
-              var confia = document.getElementById('confia').value;
+              var confia = parseFloat(document.getElementById('confia').value);
             }
             if (document.getElementById('crecer').value == ''){
               var crecer = 0;
             }else{
-              var crecer = document.getElementById('crecer').value;
+              var crecer = parseFloat(document.getElementById('crecer').value);
             }
             var afp = confia + crecer;
             var isss = document.getElementById('isss').value;
