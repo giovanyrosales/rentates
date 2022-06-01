@@ -257,6 +257,12 @@
             <form id="formularior">
               <div class="card-body">
                 <div class="row">  
+                <div class="col-md-2"> 
+                    <div class="form-group">
+                        <label>Fecha de Retención:</label>   
+                        <input type="date" class="form-control" id="fecharet" name="fecharet" placeholder="Fecha de Retención">
+                    </div>
+                  </div>
                   <div class="col-md-4"> 
                     <div class="form-group">
                           <label>DUI:</label>   
@@ -264,7 +270,7 @@
                           <input type="text" class="form-control" id="duir" name="duir" readonly placeholder="Número de Identificación Tributaria">
                     </div>
                   </div>  
-                  <div class="col-md-6">
+                  <div class="col-md-5">
                     <div class="form-group">
                           <label>Nombre:</label>   
                           <input type="text" class="form-control" id="nombrer" name="nombrer" readonly placeholder="Nombre">
@@ -272,37 +278,63 @@
                   </div>
                 </div> 
                 <div class="row">  
-                  <div class="col-md-4"> 
-                    <div class="form-group">
-                        <label>Fecha de Retención:</label>   
-                        <input type="date" class="form-control" id="fecharet" name="fecharet" placeholder="Fecha de Retención">
-                    </div>
-                  </div>
+                  
                   <div class="col-md-5">
                     <div class="form-group">
                         <label>Código de Retención:</label>   <br>
                         <select class="form-control codigoret_id" id="codigoret_id" name="codigoret_id">
                           @foreach($codigoret as $sel)
-                          <option value="{{ $sel->id }}">{{$sel->nombre}}</option>
+                          <option value="{{ $sel->id }}">{{ $sel->codigo }} {{ $sel->nombre }}</option>
                           @endforeach
                         </select>
                     </div>
                   </div>
-                </div>   
-                <div class="row">  
-                <div class="col-md-4"> 
+                </div><div class="row">  
+                  <div class="col-md-3"> 
                     <div class="form-group">
-                        <label>Devengado:</label>   
-                        <input type="number" class="form-control" step="any" id="montodevengado" name="montodevengado" placeholder="Devengado">
+                        <label>Sueldo:</label>   
+                        <input type="number" class="form-control" step="any" id="sueldo" name="sueldo" placeholder="Sueldo">
                     </div>     
                   </div> 
-                  <div class="col-md-4"> 
+                  <div class="col-md-3"> 
                     <div class="form-group">
-                        <label>Devengado Bono:</label>   
-                        <input type="number" class="form-control" step="any" id="devengadobono" name="devengadobono" placeholder="Devengado Bono">
+                        <label>Vacaciones:</label>   
+                        <input type="number" class="form-control" step="any" id="vacaciones" name="vacaciones" placeholder="Vacaciones">
                     </div>     
                   </div> 
-                  <div class="col-md-4"> 
+                  <div class="col-md-3"> 
+                    <div class="form-group">
+                        <label>Horas Extra:</label>   
+                        <input type="number" class="form-control" step="any" id="horasextra" name="horasextra" placeholder="Horas Extra">
+                    </div>     
+                  </div> 
+                  <div class="col-md-3"> 
+                    <div class="form-group">
+                        <label>Incapacidades:</label>   
+                        <input type="number" class="form-control" step="any" id="incapacidades" name="incapacidades" placeholder="Incapacidades">
+                    </div>     
+                  </div> 
+                </div>    
+                <div class="row">
+                <div class="col-md-3"> 
+                    <div class="form-group">
+                        <label>Aguinaldo Exento:</label>   
+                        <input type="number" class="form-control" step="any" id="aguinaldoexen" name="aguinaldoexeni" placeholder="Aguinaldo Exento">
+                    </div>     
+                  </div> 
+                  <div class="col-md-3"> 
+                    <div class="form-group">
+                        <label>Aguinaldo Gravado:</label>   
+                        <input type="number" class="form-control" step="any" id="aguinaldograv" name="aguinaldograv" placeholder="Aguinaldo Gravado">
+                    </div>     
+                  </div>   
+                  <div class="col-md-3"> 
+                    <div class="form-group">
+                        <label>Otros Ingresos:</label>   
+                        <input type="number" class="form-control" step="any" id="otrosingresos" name="otrosingresos" placeholder="Otros Ingresos">
+                    </div>     
+                  </div> 
+                  <div class="col-md-3"> 
                     <div class="form-group">
                         <label>Impuesto Ret.:</label>   
                         <input type="number" class="form-control" step="any" id="impuestoret" name="impuestoret" placeholder="Impuesto Ret">
@@ -310,64 +342,39 @@
                   </div> 
                 </div> 
                 <div class="row">  
-                <div class="col-md-4"> 
+                  <div class="col-md-3">     
                     <div class="form-group">
-                        <label>Aguinaldo Exento:</label>   
-                        <input type="number" class="form-control" step="any" id="aguinaldoexen" name="aguinaldoexeni" placeholder="Aguinaldo Exento">
-                    </div>     
+                        <label>CONFIA:</label>   
+                        <input type="number" class="form-control"  step="any" id="confia" name="confia" placeholder="AFP">
+                    </div>
                   </div> 
-                  <div class="col-md-4"> 
+                  <div class="col-md-3">     
                     <div class="form-group">
-                        <label>Aguinaldo Gravado:</label>   
-                        <input type="number" class="form-control" step="any" id="aguinaldograv" name="aguinaldograv" placeholder="Aguinaldo Gravado">
-                    </div>     
-                  </div> 
-                  <div class="col-md-4"> 
-                    <div class="form-group">
-                        <label>Bien Mag.:</label>   
-                        <input type="number" class="form-control" step="any" id="bienmagis" name="bienmagis" placeholder="Bien Magisterial">
-                    </div>     
-                  </div> 
-                </div> 
-                <div class="row">  
-                  <div class="col-md-4">     
-                    <div class="form-group">
-                        <label>AFP:</label>   
-                        <input type="number" class="form-control"  step="any" id="afp" name="afp" placeholder="AFP">
+                        <label>CRECER:</label>   
+                        <input type="number" class="form-control"  step="any" id="crecer" name="crecer" placeholder="AFP">
                     </div>
                   </div>  
-                  <div class="col-md-4">   
+                  <div class="col-md-3">   
                     <div class="form-group">
                         <label>ISSS:</label>   
                         <input type="number" class="form-control" step="any" id="isss" name="isss" placeholder="ISSS">
                     </div> 
                   </div> 
-                  <div class="col-md-4">   
-                    <div class="form-group">
-                        <label>INPEP:</label>   
-                        <input type="number" class="form-control"   step="any" id="inpep" name="inpep" placeholder="INPEP">
-                    </div> 
-                  </div>
+                 
                 </div> 
                 <div class="row">  
-                  <div class="col-md-4">     
+                  <div class="col-md-3">     
                     <div class="form-group">
                         <label>IPSFA:</label>   
                         <input type="number" class="form-control"  step="any" id="ipsfa" name="ipsfa" placeholder="IPSFA">
                     </div>
                   </div>  
-                  <div class="col-md-4">   
+                  <div class="col-md-3">   
                     <div class="form-group">
-                        <label>CEFAFA:</label>   
-                        <input type="number" class="form-control" step="any" id="cefafa" name="cefafa" placeholder="CEFAFA">
+                        <label>INPEP:</label>   
+                        <input type="number" class="form-control"   step="any" id="inpep" name="inpep" placeholder="INPEP">
                     </div> 
-                  </div> 
-                  <div class="col-md-4">   
-                    <div class="form-group">
-                        <label>ISSS ivm:</label>   
-                        <input type="number" class="form-control"   step="any" id="isssivm" name="isssivm" placeholder="ISSS IVM">
-                    </div> 
-                  </div>
+                  </div>  
                 </div> 
               </div>
             </form>
@@ -508,18 +515,18 @@ function abrirModalAgregarRet(id){
  function enviarModalRet(){
             var codigoret_id = document.getElementById('codigoret_id').value;
             var fecharet = document.getElementById('fecharet').value;
-            var montodevengado = document.getElementById('montodevengado').value;
-            var devengadobono = document.getElementById('devengadobono').value;
+            var montodevengado = parseFloat(document.getElementById('sueldo').value) + parseFloat(document.getElementById('vacaciones').value) + parseFloat(document.getElementById('horasextra').value) + parseFloat(document.getElementById('incapacidades').value) + parseFloat(document.getElementById('otrosingresos').value);
+            var devengadobono;
             var impuestoret = document.getElementById('impuestoret').value;
             var aguinaldoexen = document.getElementById('aguinaldoexen').value;
             var aguinaldograv = document.getElementById('aguinaldograv').value;
-            var afp = document.getElementById('afp').value;
+            var afp = parseFloat(document.getElementById('confia').value) + parseFloat(document.getElementById('crecer').value);
             var isss = document.getElementById('isss').value;
             var inpep = document.getElementById('inpep').value;
             var ipsfa = document.getElementById('ipsfa').value;
-            var cefafa = document.getElementById('cefafa').value;
-            var bienmagis = document.getElementById('bienmagis').value;
-            var isssivm = document.getElementById('isssivm').value;
+            var cefafa;
+            var bienmagis;
+            var isssivm;
             var id = document.getElementById('idUr').value;
 
    

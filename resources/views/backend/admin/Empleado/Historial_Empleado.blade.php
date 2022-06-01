@@ -52,7 +52,7 @@
                 @foreach($historial as $dato)
                 <tr>
                   <td>{{ $dato->fecharet }}</td>
-                  <td># {{ $dato->montodevengado }}</td>
+                  <td>$ {{ $dato->montodevengado }}</td>
                   <td>$ {{ $dato->impuestoret }}</td>
                   <td>$ {{ $dato->afp }}</td>
                   <td>$ {{ $dato->isss }}</td>      

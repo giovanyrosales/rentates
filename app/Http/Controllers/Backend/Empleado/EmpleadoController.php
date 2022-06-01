@@ -179,7 +179,7 @@ public function update_empleado(Request $request){
                 'empleado_id'=>$request->id,
                 'fecharet'=>$request->fecharet,
                 'montodevengado'=>$request->montodevengado,
-                'devengadobono'=>$request->devengadobono,
+                'devengadobono'=>NULL,
                 'impuestoret'=>$request->impuestoret,
                 'aguinaldoexen'=>$request->aguinaldoexen,
                 'aguinaldograv'=>$request->aguinaldograv,
@@ -187,9 +187,9 @@ public function update_empleado(Request $request){
                 'isss'=>$request->isss,
                 'inpep'=>$request->inpep,
                 'ipsfa'=>$request->ipsfa,
-                'cefafa'=>$request->cefafa,
-                'bienmagis'=>$request->bienmagis,
-                'isssivm'=>$request->isssivm]); 
+                'cefafa'=>NULL,
+                'bienmagis'=>NULL,
+                'isssivm'=>NULL]); 
 
         if($registrarret){               
                 return [
