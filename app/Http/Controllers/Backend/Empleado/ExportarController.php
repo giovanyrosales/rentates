@@ -75,9 +75,9 @@ class ExportarController extends Controller
                 $empleadodata = Empleado::where('id', $row['empleado_id'])->first();
                 $paisdata = CodigoPais::where('id', $empleadodata['codigopais_id'])->first();
                 $codigodata = Codigoret::where('id', $row['codigoret_id'])->first();
-                $nombrecompleto = str_replace(" ","",strtoupper($empleadodata['apellido'].' '.$empleadodata['nombre']));
+                $nombrecompleto = strtoupper($empleadodata['apellido'].' '.$empleadodata['nombre']);
 
-              fputcsv($file, array($empleadodata['domiciliado'], $paisdata['codigo'],$nombrecompleto , str_replace("-","",$empleadodata['nit']),str_replace("-","",$empleadodata['dui']), $codigodata['codigo'],$row['montodevengado'], $row['devengadobono'], $row['impuestoret'], $row['aguinaldoexen'], $row['aguinaldograv'], $row['afp'], $row['isss'], $row['inpep'], $row['ipsfa'], $row['cefafa'], $row['bienmagis'], $row['isssivm'], $periodo), ';');
+              fputcsv($file, array($empleadodata['domiciliado'], $paisdata['codigo'],$nombrecompleto , str_replace("-","",$empleadodata['nit']),str_replace("-","",$empleadodata['dui']), $codigodata['codigo'],$row['montodevengado'], $row['devengadobono'], $row['impuestoret'], $row['aguinaldoexen'], $row['aguinaldograv'], $row['afp'], $row['isss'], $row['inpep'], $row['ipsfa'], $row['cefafa'], $row['bienmagis'], $row['isssivm'], $periodo), ';', car(127));
            }  
                 foreach ($tasks2 as $task2) {
                   $row['proveedor_id']  = $task2->proveedor_id;
